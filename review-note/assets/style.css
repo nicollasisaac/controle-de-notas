@@ -3,12 +3,36 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
 #matters{
     width: 90%;
     margin: auto;
+    transition: .5s ease-in;
+}
+.header-matter{
+  display: flex;
+  justify-content:space-between;
+}
+
+h1{
+  margin-bottom: 1rem;
+}
+
+button{
+  background: transparent;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: .1s ease-in;
+}
+
+button:hover{
+  transition: .1s ease-in;
+  cursor: pointer;
+  background-color: #3d3d3d;
 }
 
 .matter{
@@ -21,38 +45,115 @@
     color: aliceblue;
 }
 
-.matter h1{
-    font-size: 2rem;
-    font-weight: 300;
+.divTable {
+    padding: 10px; 
+    overflow:auto;
 }
 
-.content-note p{
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 1rem;
+.divTable::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke; 
 }
-
-.matter input{
-    margin-top: 1rem;
-    outline: none;
+  
+.divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgray; 
+}
+  
+table {
+    width: 100%;
+    border-spacing: 10px;
+    justify-content: space-between;
+}
+  
+tr {
+    border-bottom: 1px solid rgb(238, 235, 235)!important;
+}
+  
+tbody tr td {
+    padding: 6px;
+    max-width: 50px;
+}
+  
+thead tr th {
     padding: 5px;
-    background: transparent;
-    border-color: white;
-    border-width: 1px;
-    border-radius: 3px;
+    text-align: start;
+    margin-bottom: 50px;
 }
-.inputs{
-    position: inherit;
-    justify-content: space-around;
+  
+tbody tr {
+    margin-bottom: 50px;
+    text-align: start;
 }
-.matter button{
-   margin-top: 1rem;
-   outline: none;
-   padding: 10px;
-   color: white;
-   cursor: pointer;
-   background: transparent;
-   border-color: white;
-   border-width: 1px;
-   border-radius: 3px;
+  
+
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px; 
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal button {
+  width: 100%;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 20px; 
+  padding: 5px 10px; 
+  width: 100%;
+  border: none;
+  background-color: rgb(57, 57, 226);
+  color: white;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
