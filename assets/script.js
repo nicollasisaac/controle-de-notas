@@ -90,9 +90,8 @@ function deleteItem(index){
 function loadItens() {
     itens = getItensBD()
     tbody.innerHTML = ''
-    itens.forEach((item, index, matter) => {
+    itens.forEach((item, index) => {
       insertItem(item, index)
-      insertItemMatter(matter)
     })
 }
 
