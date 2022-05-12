@@ -9,12 +9,13 @@
     <title>Controle de Notas</title>
 </head>
 <body>
-  <!-- <button onclick="openModalMatter()"> Adicionar Matéria</button> --> 
-    <div id="matters">
+  <!--     <button onclick="openModalMatter()"><i class='bx bx-book-add' ></i></button>   -->
+
+    <div id="matters" class="matters">
       <div class="matter">
         <div class="header-matter">
           <h1>Matemática</h1>
-          <button onclick="openModal()"> Adicionar Conteúdo Estudado</button>
+          <button onclick="openModal()"><i class='bx bx-folder-plus'></i></button>
         </div>
 
             <div class="divTable">
@@ -30,10 +31,11 @@
                   <tbody>
                   </tbody>
                 </table>
-              </div>
-          
+            </div>  
       </div>
     </div>
+
+
 
     <div class="modal-container">
         <div class="modal">
@@ -51,19 +53,18 @@
         </div>
       </div>
 
-      <!--
-      <div class="modal-container-matter">
-        <div class="modal">
-          <form>
-            <label for="m-nome">Nome da Matéria</label>
-            <input id="matter-name" type="text" required placeholder="insira o nome da matéria"/>
-            <button id="btnSalvarMatter">Criar Matéria</button>
-          </form>
-        </div>
-      </div>
-    -->
+        <!-- 
+          <div class="modal-container-matter">
+            <div class="modal">
+              <form>
+                <label for="m-nome">Nome da Matéria</label>
+                <input id="matter-name" type="text" required placeholder="insira o nome da matéria"/>
+                <button onclick="btnSalvarMatter()">Criar Matéria</button>
+              </form>
+            </div>
+          </div>
+          -->
 
-      
     <script src="/assets/script.js"></script>
 </body>
 </html>
